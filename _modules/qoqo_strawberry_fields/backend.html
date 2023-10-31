@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>qoqo_strawberry_fields.backend &mdash; qoqo_strawberry_fields 0.1 documentation</title>
+  <title>qoqo_strawberry_fields.backend &mdash; qoqo_strawberry_fields 0.2 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=5467c19a"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -33,7 +33,7 @@
             qoqo_strawberry_fields
           </a>
               <div class="version">
-                0.1
+                0.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -102,10 +102,14 @@
 <span class="n">HARDWARE_LIST</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;X8&quot;</span><span class="p">,</span> <span class="s2">&quot;X12&quot;</span><span class="p">,</span> <span class="s2">&quot;borealis&quot;</span><span class="p">]</span>
 
 
-<div class="viewcode-block" id="StrawberryFieldsBackend"><a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend">[docs]</a><span class="k">class</span> <span class="nc">StrawberryFieldsBackend</span><span class="p">:</span>
+<div class="viewcode-block" id="StrawberryFieldsBackend">
+<a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend">[docs]</a>
+<span class="k">class</span> <span class="nc">StrawberryFieldsBackend</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Qoqo backend executing qoqo objects on StrawberryFields.&quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="StrawberryFieldsBackend.__init__"><a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<div class="viewcode-block" id="StrawberryFieldsBackend.__init__">
+<a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">number_modes</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
         <span class="n">device</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -124,15 +128,24 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">__max_circuit_length</span> <span class="o">=</span> <span class="mi">100</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__max_number_shots</span> <span class="o">=</span> <span class="mi">100</span></div>
 
-<div class="viewcode-block" id="StrawberryFieldsBackend.allow_use_actual_hardware"><a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.allow_use_actual_hardware">[docs]</a>    <span class="k">def</span> <span class="nf">allow_use_actual_hardware</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+
+<div class="viewcode-block" id="StrawberryFieldsBackend.allow_use_actual_hardware">
+<a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.allow_use_actual_hardware">[docs]</a>
+    <span class="k">def</span> <span class="nf">allow_use_actual_hardware</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Allow the use of actual hardware - will cost money.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__use_actual_hardware</span> <span class="o">=</span> <span class="kc">True</span></div>
 
-<div class="viewcode-block" id="StrawberryFieldsBackend.disallow_use_actual_hardware"><a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.disallow_use_actual_hardware">[docs]</a>    <span class="k">def</span> <span class="nf">disallow_use_actual_hardware</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+
+<div class="viewcode-block" id="StrawberryFieldsBackend.disallow_use_actual_hardware">
+<a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.disallow_use_actual_hardware">[docs]</a>
+    <span class="k">def</span> <span class="nf">disallow_use_actual_hardware</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Disallow the use of actual hardware.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__use_actual_hardware</span> <span class="o">=</span> <span class="kc">False</span></div>
 
-<div class="viewcode-block" id="StrawberryFieldsBackend.change_max_shots"><a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.change_max_shots">[docs]</a>    <span class="k">def</span> <span class="nf">change_max_shots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+
+<div class="viewcode-block" id="StrawberryFieldsBackend.change_max_shots">
+<a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.change_max_shots">[docs]</a>
+    <span class="k">def</span> <span class="nf">change_max_shots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Change the maximum number of shots allowed.</span>
 
 <span class="sd">        Args:</span>
@@ -140,13 +153,17 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__max_number_shots</span> <span class="o">=</span> <span class="n">shots</span></div>
 
-<div class="viewcode-block" id="StrawberryFieldsBackend.change_max_circuit_length"><a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.change_max_circuit_length">[docs]</a>    <span class="k">def</span> <span class="nf">change_max_circuit_length</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+
+<div class="viewcode-block" id="StrawberryFieldsBackend.change_max_circuit_length">
+<a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.change_max_circuit_length">[docs]</a>
+    <span class="k">def</span> <span class="nf">change_max_circuit_length</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Change the maximum circuit length allowed.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            length: new maximum allowed length of circuit</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">__max_circuit_length</span> <span class="o">=</span> <span class="n">length</span></div>
+
 
     <span class="k">def</span> <span class="nf">__create_device</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">shots</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">sf</span><span class="o">.</span><span class="n">Engine</span><span class="p">,</span> <span class="n">sf</span><span class="o">.</span><span class="n">RemoteEngine</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Creates the device and returns it.</span>
@@ -194,7 +211,9 @@
         <span class="k">return</span> <span class="n">device</span>
 
     <span class="c1"># runs a circuit internally and can be used to produce sync and async results</span>
-<div class="viewcode-block" id="StrawberryFieldsBackend._run_circuit"><a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend._run_circuit">[docs]</a>    <span class="k">def</span> <span class="nf">_run_circuit</span><span class="p">(</span>
+<div class="viewcode-block" id="StrawberryFieldsBackend._run_circuit">
+<a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend._run_circuit">[docs]</a>
+    <span class="k">def</span> <span class="nf">_run_circuit</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">circuit</span><span class="p">:</span> <span class="n">Circuit</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">sf</span><span class="o">.</span><span class="n">Program</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
@@ -255,7 +274,10 @@
             <span class="p">{</span><span class="s2">&quot;readout_name&quot;</span><span class="p">:</span> <span class="n">readout</span><span class="p">},</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="StrawberryFieldsBackend.run_circuit"><a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.run_circuit">[docs]</a>    <span class="k">def</span> <span class="nf">run_circuit</span><span class="p">(</span>
+
+<div class="viewcode-block" id="StrawberryFieldsBackend.run_circuit">
+<a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.run_circuit">[docs]</a>
+    <span class="k">def</span> <span class="nf">run_circuit</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">circuit</span><span class="p">:</span> <span class="n">Circuit</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span>
         <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">bool</span><span class="p">]]],</span>
@@ -281,7 +303,10 @@
         <span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">metadata</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_run_circuit</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">_post_process_circuit_result</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">metadata</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="StrawberryFieldsBackend.run_measurement_registers"><a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.run_measurement_registers">[docs]</a>    <span class="k">def</span> <span class="nf">run_measurement_registers</span><span class="p">(</span>
+
+<div class="viewcode-block" id="StrawberryFieldsBackend.run_measurement_registers">
+<a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.run_measurement_registers">[docs]</a>
+    <span class="k">def</span> <span class="nf">run_measurement_registers</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">measurement</span><span class="p">:</span> <span class="n">Any</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span>
         <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">bool</span><span class="p">]]],</span>
@@ -325,7 +350,10 @@
             <span class="n">output_complex_register_dict</span><span class="p">,</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="StrawberryFieldsBackend.run_measurement"><a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.run_measurement">[docs]</a>    <span class="k">def</span> <span class="nf">run_measurement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]:</span>
+
+<div class="viewcode-block" id="StrawberryFieldsBackend.run_measurement">
+<a class="viewcode-back" href="../../generated/qoqo_strawberry_fields.html#qoqo_strawberry_fields.StrawberryFieldsBackend.run_measurement">[docs]</a>
+    <span class="k">def</span> <span class="nf">run_measurement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Run a circuit with the StrawberryFields backend.</span>
 
 <span class="sd">        Args:</span>
@@ -344,7 +372,9 @@
             <span class="n">output_bit_register_dict</span><span class="p">,</span>
             <span class="n">output_float_register_dict</span><span class="p">,</span>
             <span class="n">output_complex_register_dict</span><span class="p">,</span>
-        <span class="p">)</span></div></div>
+        <span class="p">)</span></div>
+</div>
+
 </pre></div>
 
            </div>
