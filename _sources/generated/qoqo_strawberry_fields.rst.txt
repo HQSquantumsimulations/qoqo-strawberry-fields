@@ -4,26 +4,9 @@
 .. automodule:: qoqo_strawberry_fields
 
    
-   
-   
-
-   
-   
-   
-
-   
-   
    .. rubric:: Classes
 
    .. autosummary::
    
       StrawberryFieldsBackend
    
-   
-
-   
-   
-   
-
-
-
